@@ -1,5 +1,5 @@
 #summary Index page for JZ Soc
-
+<wiki:toc max_depth="8" />
 = JZ Soc ==
 === JZ4740 ===
 ==== Introduction ====
