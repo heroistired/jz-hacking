@@ -93,9 +93,9 @@ gzip -cd ../u-boot-1.1.6-jz-20080530.patch.gz | patch -p1
 
 Change line 46 of u-boot-1.1.6/borad/pavo/u-boot-nand.lds.
 
-46 - __got_start = .; 
+{{{46 - __got_start = .; 
 46 + __got_start = ALIGN(16);
-
+}}}
 {{{
 make pavo_nand_config
 make
