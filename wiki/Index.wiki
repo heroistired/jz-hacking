@@ -1,0 +1,198 @@
+#summary Index page for JZ Soc
+
+= JZ Soc ==
+=== JZ4740 ===
+==== Introduction ====
+
+Jz4740 is a multimedia application processor targeting for mobie devices like smart-phone,PMP and GPS.Incorporate the XBurst CPU core based on leading micro-architecture technology, this processor provides high integration,high performance and low power consumption solution for embedded device.
+
+Jz4720 is the die of Jz4740. It is a low cost multimedia application processor targeting for mobile devices like MP4, electronic dictionary.
+
+JZ4732 is same of JZ4740 and it is for oversea customers.
+
+= GPL Code =
+
+Ingenic has released the source code of u-boot/linux kernel and busybox.
+
+== Toolchain ==
+
+=== linux 2.6 ===
+[ftp://ftp.ingenic.cn/3sw/01linux/00toolchain/mipseltools-gcc412-lnx26.tar.gz gcc-4.1.2 binary  version for linux]
+
+[ftp://ftp.ingenic.cn/3sw/01linux/00toolchain/jz-gcc412-glib236-src.tar.gz gcc-4.1.2 toolchain source code]
+
+Follow [ftp://ftp.ingenic.cn/3sw/01linux/08doc/mips_toolchain_guide.pdf this document] to build the toolchain.
+
+Tips: If you use ubuntu to build the toolchain, please change the default shell program to build the toolchain. 
+{{{
+sudo dpkg-reconfigure dash
+}}}
+
+See [https://wiki.ubuntu.com/DashAsBinSh DashAsBinSh] for more information. 
+
+=== linux 2.4 ===
+[ftp://ftp.ingenic.cn/3sw/01linux/00toolchain/mipseltools-gcc331-lnx24.tar.gz gcc-3.3.1 binary version for linux]
+
+[ftp://ftp.ingenic.cn/3sw/01linux/00toolchain/mipseltools-gcc331-lnx24-cygwin.tar.gz gcc-3.3.1 binary version for cygwin]
+
+[ftp://ftp.ingenic.cn/3sw/01linux/00toolchain/mipseltools-gcc412-lnx24.tar.gz gcc-4.1.2 binary version for linux]
+
+[ftp://ftp.ingenic.cn/3sw/01linux/00toolchain/mipseltools-gcc412-lnx24-cygwin.tar.gz gcc-4.1.2 binary version for cygwin]
+
+
+== u-boot ==
+
+[ftp://ftp.ingenic.cn/3sw/01linux/01loader/u-boot/u-boot-1.1.6.tar.bz2 u-boot-1.1.6.tar.bz2]
+
+[ftp://ftp.ingenic.cn/3sw/01linux/01loader/u-boot/u-boot-1.1.6-jz-20080530.patch.gz u-boot-1.1.6-jz-20080530.patch.gz]
+
+[ftp://ftp.ingenic.cn/3sw/01linux/08doc/uboot_developer_guide.pdf uboot_developer_guide.pdf]
+
+== Linux ==
+
+[ftp://ftp.ingenic.cn/3sw/01linux/02kernel/linux-2.6.24/linux-2.6.24.3.tar.bz2 linux-2.6.24.3.tar.bz2]
+
+[ftp://ftp.ingenic.cn/3sw/01linux/02kernel/linux-2.6.24/linux-2.6.24.3-jz-20080530.patch.gz linux-2.6.24.3-jz-20080530.patch.gz]
+
+[ftp://ftp.ingenic.cn/3sw/01linux/08doc/linux2.6_developer_guide_v1.4.1.pdf linux2.6_developer_guide_v1.4.1.pdf]
+
+== rootfs ==
+
+[ftp://ftp.ingenic.cn/3sw/01linux/03root/rootfs.tgz rootfs.tgz]
+
+= demo boards =
+== pavo ==
+
+= qemu-jz =
+
+qemu-jz is the qemu folk for JZ Soc emulation. Currently JZ4740 and pavo demo board is supported.
+
+== build qemu-jz ==
+
+Download the qemu-jz from [http://jz-hacking.googlecode.com/files/qemu-JZ_20090207.tar.gz here]. Please install the dependency library first. GCC-3.4 is suggested to build qemu-jz.
+
+{{{
+wget http://jz-hacking.googlecode.com/files/qemu-JZ_20090207.tar.gz
+tar zxvf qemu-JZ_20090207.tar.gz
+cd qemu-JZ
+./configure --target-list=mipsel-softmmu
+make
+}}}
+
+== build u-boot ==
+
+{{{
+wget ftp://ftp.ingenic.cn/3sw/01linux/01loader/u-boot/u-boot-1.1.6.tar.bz2
+wget ftp://ftp.ingenic.cn/3sw/01linux/01loader/u-boot/u-boot-1.1.6-jz-20080530.patch.gz
+tar jxvf u-boot-1.1.6.tar.bz2
+cd u-boot-1.1.6
+gzip -cd ../u-boot-1.1.6-jz-20080530.patch.gz | patch -p1
+}}}
+
+Change line 46 of u-boot-1.1.6/borad/pavo/u-boot-nand.lds.
+46 - __got_start = .; 
+46 + __got_start = ALIGN(16);
+
+Change TOTAL_MALLOC_LEN in u-boot-1.1.6/lib_mips/borad.c.
+37 - #define TOTAL_MALLOC_LEN        (CFG_MALLOC_LEN + CFG_ENV_SIZE)
+37 + #define TOTAL_MALLOC_LEN        (CFG_MALLOC_LEN + CFG_ENV_SIZE*3)
+
+{{{
+make pavo_nand_config
+make
+}}}
+
+== build linux ==
+
+{{{
+wget ftp://ftp.ingenic.cn/3sw/01linux/02kernel/linux-2.6.24/linux-2.6.24.3.tar.bz2
+wget ftp://ftp.ingenic.cn/3sw/01linux/02kernel/linux-2.6.24/linux-2.6.24.3-jz-20080530.patch.gz
+tar jxvf linux-2.6.24.3.tar.bz2
+cd linux-2.6.24.3
+gzip -cd ../linux-2.6.24.3-jz-20080530.patch.gz | patch -p1
+}}}
+
+Download the config file of linux kernel.
+{{{
+wget http://jz-hacking.googlecode.com/files/pavo_config_linux_2.6.24.3
+mv pavo_config_linux_2.6.24.3 .config
+make
+}}}
+uImage will be created in arch/mips/uboot/ directory. 
+
+== make the yaffs2 image ==
+
+We need mkyaffs2image tool to convert the rootfs into yaffs2 format. You CAN NOT use the tool from www.yaffs.net directly. Please use the utils from jz's linux patch. I strip the source code from jz's linux patch. Please download it first. 
+{{{
+wget http://jz-hacking.googlecode.com/files/yaffs2.tar.bz2
+tar jxvf yaffs2.tar.bz2
+cd yaffs2/utils
+make
+}}}
+
+Download rootfs and convert it to yaffs2 format.
+
+{{{
+wget ftp://ftp.ingenic.cn/3sw/01linux/03root/rootfs.tgz
+tar zxvf rootfs.tgz
+cd rootfs
+cp -rf root24/opt/Qtopia/ root26/opt/
+mkyaffs2image 1 root26 rootfs.yaffs2
+}}}
+
+== build jz_tools ==
+
+The tool 'pavo_nandflash' is used to generate the nand flash image used by pavo demo board. Libconfuse is needed to build jz_tools.
+{{{
+wget http://jz-hacking.googlecode.com/files/jz_tools_20090207.tar.gz
+tar zxvf jz_tools_20090207.tar.gz
+cd jz_tools/nand_flash
+make clean
+make
+}}}
+
+== make the nand flash image ==
+
+The last step is to make the nand flash image for pavo emulation. Assume we are in directory jz_tools/nand_flash. Edit the pavo_nandflash.conf.
+
+{{{
+#
+# pavo board nand flash configuration file.
+# Copyright (C) 2008 yajin(yajin@vm-kernel.org)
+#
+ 
+ 
+# comment the unwanted part
+
+flash_image = pavo-nand.bin
+ 
+uboot_image = u-boot-nand.bin
+uboot_start = 0x00000000
+uboot_end = 0x00400000
+uboot_add_ecc = 0
+ 
+kernel_image = uImage
+kernel_start = 0x00400000
+kernel_end = 0x00800000
+kernel_add_ecc = 0
+ 
+rootfs_image = rootfs.yaffs2
+rootfs_start = 0x00800000
+rootfs_end = 0x08000000
+rootfs_oob = 1
+rootfs_add_ecc = 0
+}}}
+
+Copy u-boot-nand.bin from uboot and uImage from linux to current directory. Copy rootfs.yaffs2 to currently too. Run pavo_nand_flash 
+{{{
+./pavo_nandflash
+}}}
+
+Nand flash image pavo-nand.bin will be generated. 
+
+== run qemu-jz ==
+
+Copy pavo-nand.bin to qemu-JZ/mipsel-softmmu directory. CD to qemu-JZ.
+{{{
+
+}}}
