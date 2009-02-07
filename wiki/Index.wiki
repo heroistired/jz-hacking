@@ -1,8 +1,8 @@
 #summary Index page for JZ Soc
 <wiki:toc max_depth="8" />
 = JZ Soc ==
-=== JZ4740 ===
-==== Introduction ====
+== JZ4740 ==
+=== Introduction ===
 
 Jz4740 is a multimedia application processor targeting for mobie devices like smart-phone,PMP and GPS.Incorporate the XBurst CPU core based on leading micro-architecture technology, this processor provides high integration,high performance and low power consumption solution for embedded device.
 
