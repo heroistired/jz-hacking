@@ -1,6 +1,7 @@
 #summary Index page for JZ Soc
 <wiki:toc max_depth="8" />
 = JZ Soc ==
+<hr>
 == JZ4720 ==
 == JZ4730 ==
 == JZ4740 ==
@@ -63,10 +64,11 @@ See [https://wiki.ubuntu.com/DashAsBinSh DashAsBinSh] for more information.
 [ftp://ftp.ingenic.cn/3sw/01linux/03root/rootfs.tgz rootfs.tgz]
 
 = demo boards =
+<hr>
 == pavo ==
 
 = qemu-jz =
-
+<hr>
 qemu-jz is the qemu folk for JZ Soc emulation. Currently JZ4740 and pavo demo board is supported.
 
 == build qemu-jz ==
