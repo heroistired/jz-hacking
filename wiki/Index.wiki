@@ -93,10 +93,6 @@ Change line 46 of u-boot-1.1.6/borad/pavo/u-boot-nand.lds.
 46 - __got_start = .; 
 46 + __got_start = ALIGN(16);
 
-Change TOTAL_MALLOC_LEN in u-boot-1.1.6/lib_mips/borad.c.
-37 - #define TOTAL_MALLOC_LEN        (CFG_MALLOC_LEN + CFG_ENV_SIZE)
-37 + #define TOTAL_MALLOC_LEN        (CFG_MALLOC_LEN + CFG_ENV_SIZE*3)
-
 {{{
 make pavo_nand_config
 make
