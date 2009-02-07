@@ -1,7 +1,7 @@
 #summary Index page for JZ Soc
 <wiki:toc max_depth="8" />
 = JZ Soc ==
-<hr>
+
 == JZ4720 ==
 == JZ4730 ==
 == JZ4740 ==
