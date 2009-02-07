@@ -195,4 +195,9 @@ Copy pavo-nand.bin to qemu-JZ/mipsel-softmmu directory. CD to qemu-JZ.
 ./qemu-system-mipsel -M pavo -mtdblock pavo-nand.bin
 }}}
 
-When you enter linux 2.6 shell. Type 'runqpe'. Do not forget to calibrate touchscreen in qtopia before playing with it. Settings->recalibrate 
+Using ctl+alt+1 to switch lcd panel and ctl+alt+3 to serial console.
+When you enter linux 2.6 shell. Type 'runqpe'. Do not forget to calibrate touchscreen in qtopia before playing with it. Settings->recalibrate.
+
+Following is the screenshot of qtopia on qemu-jz.
+
+http://lh6.ggpht.com/_vf_uV7bji2A/SY1fP_9dwCI/AAAAAAAAAQY/zgeB9nJlfB0/s400/qtopia-2.6.jpg
