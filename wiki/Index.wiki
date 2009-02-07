@@ -190,5 +190,9 @@ Nand flash image pavo-nand.bin will be generated.
 
 Copy pavo-nand.bin to qemu-JZ/mipsel-softmmu directory. CD to qemu-JZ.
 {{{
-
+./qemu-system-mipsel -M pavo -mtdblock pavo-nand.bin
 }}}
+
+When you enter linux 2.6 shell. Type 'runqpe'. Do not forget to calibrate touchscreen in qtopia before playing with it. Settings->recalibrate 
+
+
