@@ -14,7 +14,7 @@ Jz4720 is the die of Jz4740. It is a low cost multimedia application processor t
 JZ4732 is same of JZ4740 and it is for oversea customers.
 
 = GPL Code =
-<hr>
+
 Ingenic has released the source code of u-boot/linux kernel and busybox.
 
 == Toolchain ==
@@ -64,11 +64,11 @@ See [https://wiki.ubuntu.com/DashAsBinSh DashAsBinSh] for more information.
 [ftp://ftp.ingenic.cn/3sw/01linux/03root/rootfs.tgz rootfs.tgz]
 
 = demo boards =
-<hr>
+
 == pavo ==
 
 = qemu-jz =
-<hr>
+
 qemu-jz is the qemu folk for JZ Soc emulation. Currently JZ4740 and pavo demo board is supported.
 
 == build qemu-jz ==
