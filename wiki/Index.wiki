@@ -1,6 +1,8 @@
 #summary Index page for JZ Soc
 <wiki:toc max_depth="8" />
 = JZ Soc ==
+== JZ4720 ==
+== JZ4730 ==
 == JZ4740 ==
 === Introduction ===
 
@@ -194,5 +196,3 @@ Copy pavo-nand.bin to qemu-JZ/mipsel-softmmu directory. CD to qemu-JZ.
 }}}
 
 When you enter linux 2.6 shell. Type 'runqpe'. Do not forget to calibrate touchscreen in qtopia before playing with it. Settings->recalibrate 
-
-
