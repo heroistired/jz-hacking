@@ -17,13 +17,13 @@ Ingenic has released the source code of u-boot/linux kernel and busybox.
 == Toolchain ==
 
 === linux 2.6 ===
-[ftp://ftp.ingenic.cn/3sw/01linux/00toolchain/mipseltools-gcc412-lnx26.tar.gz gcc-4.1.2 binary  version for linux]
+ * [ftp://ftp.ingenic.cn/3sw/01linux/00toolchain/mipseltools-gcc412-lnx26.tar.gz gcc-4.1.2 binary  version for linux]
 
-[ftp://ftp.ingenic.cn/3sw/01linux/00toolchain/jz-gcc412-glib236-src.tar.gz gcc-4.1.2 toolchain source code]
+ * [ftp://ftp.ingenic.cn/3sw/01linux/00toolchain/jz-gcc412-glib236-src.tar.gz gcc-4.1.2 toolchain source code]
 
 Follow [ftp://ftp.ingenic.cn/3sw/01linux/08doc/mips_toolchain_guide.pdf this document] to build the toolchain.
 
-Tips: If you use ubuntu to build the toolchain, please change the default shell program to build the toolchain. 
+Tips: If you use ubuntu to build the toolchain, please change the default shell program to bash to build the toolchain. 
 {{{
 sudo dpkg-reconfigure dash
 }}}
