@@ -8,7 +8,7 @@ Jz4740 is a multimedia application processor targeting for mobie devices like sm
 
 Jz4720 is the die of Jz4740. It is a low cost multimedia application processor targeting for mobile devices like MP4, electronic dictionary.
 
-JZ4732 is same of JZ4740 and it is for oversea customers.
+JZ4732 is same to JZ4740 and it is for oversea customers.
 
 == usb boot ==
 
