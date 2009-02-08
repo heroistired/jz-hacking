@@ -1,7 +1,7 @@
 #summary This page collects information about Ingenic's MIPS based Soc.
 <wiki:toc max_depth="8" />
 = JZ Soc ==
-
+<hr>
 == Introduction ==
 
 Jz4740 is a multimedia application processor targeting for mobie devices like smart-phone,PMP and GPS.Incorporate the XBurst CPU core based on leading micro-architecture technology, this processor provides high integration,high performance and low power consumption solution for embedded device.
@@ -11,7 +11,7 @@ Jz4720 is the die of Jz4740. It is a low cost multimedia application processor t
 JZ4732 is same of JZ4740 and it is for oversea customers.
 
 = Source Code =
-
+<hr>
 Ingenic has released the source code of u-boot/linux kernel and busybox.
 
 == Toolchain ==
@@ -61,11 +61,11 @@ See [https://wiki.ubuntu.com/DashAsBinSh DashAsBinSh] for more information.
 [ftp://ftp.ingenic.cn/3sw/01linux/03root/rootfs.tgz rootfs.tgz]
 
 = demo boards =
-
+<hr>
 == pavo ==
 
 = qemu-jz =
-
+<hr>
 qemu-jz is the qemu folk for JZ Soc emulation. Currently JZ4740 and pavo demo board is supported.
 
 == build qemu-jz ==
@@ -203,4 +203,34 @@ Following is the screenshot of qtopia on qemu-jz.
 
 http://lh6.ggpht.com/_vf_uV7bji2A/SY1fP_9dwCI/AAAAAAAAAQY/zgeB9nJlfB0/s400/qtopia-2.6.jpg
 
-= jz-hack =
+= JZ-hacking =
+<hr>
+JZ-hacking is a project to hack jz soc based devices, for example mp4/pmp. Currently, the main effort is on porting u-boot/linux to onda vx747. 
+
+== Source code ==
+=== jz_xloader ===
+N/A
+=== jz_uboot ===
+N/A
+== onda vx747 ==
+
+=== uart pins ===
+The UART connections on the VX747 board has been found by [http://www.linuxforum.net/forum/showprofile.php?User=panjet&What=ubbthreads panjet]. [http://www.linuxforum.net/forum/showflat.php?Cat=&Board=embedded&Number=707757&page=0&view=collapsed&sb=5&o=0&fpart=4&vc=1 Form thread link]
+
+[http://www.rockbox.org/twiki/pub/Main/OndaVX747/snapshot1.jpg]
+[http://www.rockbox.org/twiki/pub/Main/OndaVX747/snapshot2.jpg]
+
+=== rockbox ===
+
+It is supported by [http://www.rockbox.org/twiki/bin/view/Main/OndaVX747 rockbox] though not fully complete. [http://vm-kernel.org/blog/2009/01/12/how-to-run-rockbox-on-vx747/ This article] describes how to use rockbox on vx747.
+
+=== u-boot on vx747 ===
+
+u-boot can be run on vx747 now and LCD is working.
+
+[http://lh5.ggpht.com/_vf_uV7bji2A/SYreeurIHeI/AAAAAAAAAP8/HdYEsSs1xtk/s800/uboot-747.jpg]
+
+= Links =
+<hr>
+ * [http://www.rockbox.org/wiki/IngenicJz47xx rockbox wiki page]
+ * [http://www.linuxforum.net/forum/showflat.php?Cat=&Board=embedded&Number=707757&page=0&view=collapsed&sb=5&o=0&fpart= forum thread of vx747 hacking(Chinese)]
