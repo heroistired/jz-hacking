@@ -1,6 +1,6 @@
 #summary This page collects information about Ingenic's MIPS based Soc.
 <wiki:toc max_depth="8" />
-= jz Soc ==
+= jz soc ==
 <hr>
 == Introduction ==
 
@@ -81,7 +81,7 @@ N/A
 <hr>
 Jz-hacking is a project to hack jz soc based devices, for example mp4/pmp. Currently, the main effort is on porting u-boot/linux to onda vx747. 
 
-== Source code ==
+== source code ==
 === jz_xloader ===
 N/A
 === jz_uboot ===
