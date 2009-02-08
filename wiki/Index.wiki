@@ -1,6 +1,6 @@
 #summary This page collects information about Ingenic's MIPS based Soc.
 <wiki:toc max_depth="8" />
-= JZ Soc ==
+= jz Soc ==
 <hr>
 == Introduction ==
 
@@ -18,11 +18,11 @@ N/A
 
 N/A 
 
-= Source Code =
+= source code =
 <hr>
 Ingenic has released the source code of u-boot/linux kernel and busybox.
 
-== Toolchain ==
+== toolchain ==
 
 === linux 2.6 ===
  * [ftp://ftp.ingenic.cn/3sw/01linux/00toolchain/mipseltools-gcc412-lnx26.tar.gz gcc-4.1.2 binary  version for linux]
@@ -56,7 +56,7 @@ See [https://wiki.ubuntu.com/DashAsBinSh DashAsBinSh] for more information.
 
  * [ftp://ftp.ingenic.cn/3sw/01linux/08doc/uboot_developer_guide.pdf uboot_developer_guide.pdf]
 
-== Linux ==
+== linux ==
 
  * [ftp://ftp.ingenic.cn/3sw/01linux/02kernel/linux-2.6.24/linux-2.6.24.3.tar.bz2 linux-2.6.24.3.tar.bz2]
 
@@ -77,9 +77,9 @@ N/A
 
 [qemujz how to use qemu-jz]
 
-= JZ-hacking =
+= jz-hacking =
 <hr>
-JZ-hacking is a project to hack jz soc based devices, for example mp4/pmp. Currently, the main effort is on porting u-boot/linux to onda vx747. 
+Jz-hacking is a project to hack jz soc based devices, for example mp4/pmp. Currently, the main effort is on porting u-boot/linux to onda vx747. 
 
 == Source code ==
 === jz_xloader ===
