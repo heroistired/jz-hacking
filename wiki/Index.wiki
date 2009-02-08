@@ -14,6 +14,10 @@ JZ4732 is same of JZ4740 and it is for oversea customers.
 
 N/A
 
+== nand boot ==
+
+N/A 
+
 = Source Code =
 <hr>
 Ingenic has released the source code of u-boot/linux kernel and busybox.
