@@ -118,7 +118,7 @@ rootfs_oob = 1
 rootfs_add_ecc = 0
 }}}
 
-Copy u-boot-nand.bin from uboot and uImage from linux to current directory. Copy rootfs.yaffs2 to currently too. Run pavo_nand_flash 
+Copy u-boot-nand.bin from uboot and uImage from linux to current directory. Copy rootfs.yaffs2 to currently directory too. Run pavo_nand_flash 
 {{{
 ./pavo_nandflash
 }}}
