@@ -16,7 +16,7 @@ cd qemu-JZ
 make
 }}}
 
-tips: In MAC, you can use the flowing compile flag:
+Tips: In MAC, you can use the flowing compile flag:
 {{{
 ./configure --disable-sdl --disable-aio --enable-cocoa --prefix=/opt/qemu --target-list=mips-softmmu
 }}}
