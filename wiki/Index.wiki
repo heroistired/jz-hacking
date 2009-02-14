@@ -86,6 +86,9 @@ Jz-hacking is a project to hack jz soc based devices, for example mp4/pmp. Curre
 N/A
 === jz_uboot ===
 N/A
+=== jz_linux_2.6.24.3 ===
+N/A
+
 == onda vx747 ==
 
 === uart pins ===
