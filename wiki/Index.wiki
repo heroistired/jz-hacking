@@ -99,8 +99,9 @@ The UART connections on the VX747 board has been found by [http://www.linuxforum
 It is supported by [http://www.rockbox.org/twiki/bin/view/Main/OndaVX747 rockbox] though not fully complete. [http://vm-kernel.org/blog/2009/01/12/how-to-run-rockbox-on-vx747/ This article] describes how to use rockbox on vx747.
 
 === u-boot on vx747 ===
-
-u-boot can be run on vx747 now and LCD is working.
+Current Status:
+ * u-boot can be run on vx747 now and LCD is working.
+ * SD card is working
 
 [http://lh5.ggpht.com/_vf_uV7bji2A/SYreeurIHeI/AAAAAAAAAP8/HdYEsSs1xtk/s800/uboot-747.jpg]
 
