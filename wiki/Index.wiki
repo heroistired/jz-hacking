@@ -113,3 +113,4 @@ Current Status:
  * [http://www.rockbox.org/wiki/IngenicJz47xx rockbox wiki page]
  * [http://www.linuxforum.net/forum/showflat.php?Cat=&Board=embedded&Number=707757&page=0&view=collapsed&sb=5&o=0&fpart= forum thread of vx747 hacking(Chinese)]
  * [http://www.liliputing.com/2008/08/little-linux-laptop-new-site-dedicated-to-the-cheapest-of-notebooks.html Little Linux Laptop: New site dedicated to the cheapest of notebooks]
+ * [http://groups.google.com/group/jz4740_linux a google group about hacking jz4740(in Chinese)]
