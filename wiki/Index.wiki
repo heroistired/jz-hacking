@@ -105,6 +105,9 @@ It is supported by [http://www.rockbox.org/twiki/bin/view/Main/OndaVX747 rockbox
 Current Status:
  * u-boot can be run on vx747 now and LCD is working.
  * SD card is working
+ * nand flash driver is working
+ * programing u-boot into nand flash automatically is working
+ * loading linux kernel from sd card is working
 
 [http://picasaweb.google.com/lh/photo/K7y9F0VyKRKcTPMEpABhxw?feat=directlink screenshot:u-boot on onda vx747]
 
