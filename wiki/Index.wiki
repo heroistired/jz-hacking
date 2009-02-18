@@ -106,7 +106,10 @@ Current Status:
  * u-boot can be run on vx747 now and LCD is working.
  * SD card is working
 
-[http://lh5.ggpht.com/_vf_uV7bji2A/SYreeurIHeI/AAAAAAAAAP8/HdYEsSs1xtk/s800/uboot-747.jpg]
+[http://lh5.ggpht.com/_vf_uV7bji2A/SYreeurIHeI/AAAAAAAAAP8/HdYEsSs1xtk/s800/uboot-747.jpg screenshot:u-boot on onda vx747]
+
+=== OEM products ===
+ * [http://en.pasen.it/product_detail.php?id=36 Pasen Itouch LE]
 
 = Links =
 <hr>
