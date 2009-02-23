@@ -38,21 +38,11 @@ sudo dpkg-reconfigure dash
 
 See [https://wiki.ubuntu.com/DashAsBinSh DashAsBinSh] for more information. 
 
-=== linux 2.4 ===
- * [ftp://ftp.ingenic.cn/3sw/01linux/00toolchain/mipseltools-gcc331-lnx24.tar.gz gcc-3.3.1 binary version for linux]
-
- * [ftp://ftp.ingenic.cn/3sw/01linux/00toolchain/mipseltools-gcc331-lnx24-cygwin.tar.gz gcc-3.3.1 binary version for cygwin]
-
- * [ftp://ftp.ingenic.cn/3sw/01linux/00toolchain/mipseltools-gcc412-lnx24.tar.gz gcc-4.1.2 binary version for linux]
-
- * [ftp://ftp.ingenic.cn/3sw/01linux/00toolchain/mipseltools-gcc412-lnx24-cygwin.tar.gz gcc-4.1.2 binary version for cygwin]
-
-
 == u-boot ==
 
  * [ftp://ftp.ingenic.cn/3sw/01linux/01loader/u-boot/u-boot-1.1.6.tar.bz2 u-boot-1.1.6.tar.bz2]
 
- * [ftp://ftp.ingenic.cn/3sw/01linux/01loader/u-boot/u-boot-1.1.6-jz-20080530.patch.gz u-boot-1.1.6-jz-20080530.patch.gz]
+ * [ftp://ftp.ingenic.cn/3sw/01linux/01loader/u-boot/u-boot-1.1.6-jz-20090216.patch.gz u-boot-1.1.6-jz-20090216.patch.gz]
 
  * [ftp://ftp.ingenic.cn/3sw/01linux/08doc/uboot_developer_guide.pdf uboot_developer_guide.pdf]
 
@@ -60,13 +50,13 @@ See [https://wiki.ubuntu.com/DashAsBinSh DashAsBinSh] for more information.
 
  * [ftp://ftp.ingenic.cn/3sw/01linux/02kernel/linux-2.6.24/linux-2.6.24.3.tar.bz2 linux-2.6.24.3.tar.bz2]
 
- * [ftp://ftp.ingenic.cn/3sw/01linux/02kernel/linux-2.6.24/linux-2.6.24.3-jz-20080530.patch.gz linux-2.6.24.3-jz-20080530.patch.gz]
+ * [ftp://ftp.ingenic.cn/3sw/01linux/02kernel/linux-2.6.24/linux-2.6.24.3-jz-20090218.patch.gz linux-2.6.24.3-jz-20090218.patch.gz]
 
  * [ftp://ftp.ingenic.cn/3sw/01linux/08doc/linux2.6_developer_guide_v1.4.1.pdf linux2.6_developer_guide_v1.4.1.pdf]
 
 == rootfs ==
 
- * [ftp://ftp.ingenic.cn/3sw/01linux/03root/rootfs.tgz rootfs.tgz]
+ * [ftp://ftp.ingenic.cn/3sw/01linux/03root/root-jz-20090216.tar.bz2 root-jz-20090216.tar.bz2]
 
 = demo boards =
 <hr>
