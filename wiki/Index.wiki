@@ -12,11 +12,11 @@ JZ4732 is same to JZ4740 and it is for oversea customers.
 
 == usb boot ==
 
-N/A
+JZ4740 can be booted form USB. If so, the internal ROM can communicate with PC using USB port. PC can send files to JZ4740's internal ram or SDRAM and execute program.
 
 == nand boot ==
 
-N/A 
+JZ4740 can boot from nand flash devices. If it is configured booting from nand flash, its internal rom load the first 8K code from nand flash into internal sram and then execute. This 8K code can contain SDRAM init process and other low level init functions and then the program can be executed in SDRAM.
 
 = source code =
 <hr>
@@ -83,11 +83,16 @@ Jz-hacking is a project to hack jz soc based devices, for example mp4/pmp. Curre
 
 == source code ==
 === jz_xloader ===
-N/A
+
+JZ_xloader is a program to do low level init, pll/sdram for example. It can be uploaded to JZ4740's sram using usb boot. After jz_xloader initializing SDRAM, the bootloader, u-boot for example, can be loaded into SDRAM.
+
 === jz_uboot ===
-N/A
+
+JZ_uboot is the bootloader for jz4740 based devices. It is based on the source code released by ingenic.
+
 === jz_linux_2.6.24.3 ===
-N/A
+
+JZ_linux_2.6.24.3 is the linux kernel source code for jz4740 based devices. It is based on the source code released by ingenic.
 
 == onda vx747 ==
 
@@ -106,10 +111,18 @@ Current Status:
  * u-boot can be run on vx747 now and LCD is working.
  * SD card is working
  * nand flash driver is working
- * programing u-boot into nand flash automatically is working
+ * programing u-boot into nand flash automatically
  * loading linux kernel from sd card is working
 
 [http://picasaweb.google.com/lh/photo/K7y9F0VyKRKcTPMEpABhxw?feat=directlink screenshot:u-boot on onda vx747]
+
+=== linux on vx747 ===
+Current Status:
+ * LCD and frame buffer is working (frame buffer console is not working)
+ * SD card is working
+ * can run rootfs 2.6 (qtopia 1.6.1) released by ingenic
+
+[how to run linux on vx747]
 
 === OEM products ===
  * [http://en.pasen.it/product_detail.php?id=36 Pasen Itouch LE]
