@@ -112,7 +112,7 @@ Current Status:
  * SD card is working
  * can run rootfs 2.6 (qtopia 1.6.1) released by ingenic
 
-[how to run linux on vx747]
+[http://vm-kernel.org/blog/2009/02/24/linux-on-onda-vx747/ how to run linux on onda vx747]
 
 === OEM products ===
  * [http://en.pasen.it/product_detail.php?id=36 Pasen Itouch LE]
