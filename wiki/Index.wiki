@@ -1,9 +1,9 @@
 #summary This page collects information about Ingenic's MIPS based Soc.
 
-<wiki:toc max_depth="5" />
+<wiki:toc max_depth="2" />
 
 = jz soc =
-<hr>
+
 == Introduction ==
 
 Jz4740 is a multimedia application processor targeting for mobie devices like smart-phone,PMP and GPS.Incorporate the XBurst CPU core based on leading micro-architecture technology, this processor provides high integration,high performance and low power consumption solution for embedded device.
@@ -15,123 +15,3 @@ JZ4732 is same to JZ4740 and it is for oversea customers.
 == usb boot ==
 
 JZ4740 can be booted form USB. If so, the internal ROM can communicate with PC using USB port. PC can send files to JZ4740's internal ram or SDRAM and execute program.
-
-== nand boot ==
-
-JZ4740 can boot from nand flash devices. If it is configured booting from nand flash, its internal rom load the first 8K code from nand flash into internal sram and then execute. This 8K code can contain SDRAM init process and other low level init functions and then the program can be executed in SDRAM.
-
-= source code =
-<hr>
-Ingenic has released the source code of u-boot/linux kernel and busybox.
-
-== toolchain ==
-
-=== linux 2.6 ===
- * [ftp://ftp.ingenic.cn/3sw/01linux/00toolchain/mipseltools-gcc412-lnx26.tar.gz gcc-4.1.2 binary  version for linux]
-
- * [ftp://ftp.ingenic.cn/3sw/01linux/00toolchain/jz-gcc412-glib236-src.tar.gz gcc-4.1.2 toolchain source code]
-
-Follow [ftp://ftp.ingenic.cn/3sw/01linux/08doc/mips_toolchain_guide.pdf this document] to build the toolchain.
-
-Tips: If you use ubuntu to build the toolchain, please change the default shell program to bash to build the toolchain. 
-{{{
-sudo dpkg-reconfigure dash
-}}}
-
-See [https://wiki.ubuntu.com/DashAsBinSh DashAsBinSh] for more information. 
-
-== u-boot ==
-
- * [ftp://ftp.ingenic.cn/3sw/01linux/01loader/u-boot/u-boot-1.1.6.tar.bz2 u-boot-1.1.6.tar.bz2]
-
- * [ftp://ftp.ingenic.cn/3sw/01linux/01loader/u-boot/u-boot-1.1.6-jz-20090216.patch.gz u-boot-1.1.6-jz-20090216.patch.gz]
-
- * [ftp://ftp.ingenic.cn/3sw/01linux/08doc/uboot_developer_guide.pdf uboot_developer_guide.pdf]
-
-== linux ==
-
- * [ftp://ftp.ingenic.cn/3sw/01linux/02kernel/linux-2.6.24/linux-2.6.24.3.tar.bz2 linux-2.6.24.3.tar.bz2]
-
- * [ftp://ftp.ingenic.cn/3sw/01linux/02kernel/linux-2.6.24/linux-2.6.24.3-jz-20090218.patch.gz linux-2.6.24.3-jz-20090218.patch.gz]
-
- * [ftp://ftp.ingenic.cn/3sw/01linux/08doc/linux2.6_developer_guide_v1.4.1.pdf linux2.6_developer_guide_v1.4.1.pdf]
-
-== rootfs ==
-
- * [ftp://ftp.ingenic.cn/3sw/01linux/03root/root-jz-20090216.tar.bz2 root-jz-20090216.tar.bz2]
-
-= demo boards =
-<hr>
-== pavo ==
-N/A
-= qemu-jz =
-<hr>
-http://repo.or.cz/w/qemu/qemu-JZ.git
-
-[qemujz how to use qemu-jz]
-
-= jz-hacking =
-<hr>
-Jz-hacking is a project to hack jz soc based devices, for example mp4/pmp. Currently, the main effort is on porting u-boot/linux to onda vx747. 
-
-== source code ==
-=== jz_tools ===
-http://repo.or.cz/w/jz_tools.git
-
-Some tools used for jz_hacking.
-
-=== jz_xloader ===
-http://repo.or.cz/w/jz_xloader.git
-
-JZ_xloader is a program to do low level init, pll/sdram for example. It can be uploaded to JZ4740's sram using usb boot. After jz_xloader initializing SDRAM, the bootloader, u-boot for example, can be loaded into SDRAM.
-
-=== jz_uboot ===
-http://repo.or.cz/w/jz_uboot.git
-
-JZ_uboot is the bootloader for jz4740 based devices. It is based on the source code released by ingenic.
-
-=== jz_linux_2.6.24.3 ===
-http://repo.or.cz/w/jz_linux_2.6.24.3.git
-
-JZ_linux_2.6.24.3 is the linux kernel source code for jz4740 based devices. It is based on the source code released by ingenic.
-
-== onda vx747 ==
-
-=== uart pins ===
-
-The UART connections on the VX747 board has been found by [http://www.linuxforum.net/forum/showprofile.php?User=panjet&What=ubbthreads panjet]. [http://www.linuxforum.net/forum/showflat.php?Cat=&Board=embedded&Number=707757&page=0&view=collapsed&sb=5&o=0&fpart=4&vc=1 Form thread link]
-
-[vx747uart uart pins for vx747].
-
-=== rockbox ===
-
-It is supported by [http://www.rockbox.org/twiki/bin/view/Main/OndaVX747 rockbox] though not fully complete. [http://vm-kernel.org/blog/2009/01/12/how-to-run-rockbox-on-vx747/ This article] describes how to use rockbox on vx747.
-
-=== u-boot on vx747 ===
-Current Status:
- * u-boot can be run on vx747 now and LCD is working.
- * SD card is working
- * nand flash driver is working
- * programing u-boot into nand flash automatically
- * loading linux kernel from sd card is working
-
-[http://picasaweb.google.com/lh/photo/K7y9F0VyKRKcTPMEpABhxw?feat=directlink screenshot:u-boot on onda vx747]
-
-=== linux on vx747 ===
-Current Status:
- * LCD and frame buffer is working (frame buffer console is not working)
- * SD card is working
- * can run rootfs 2.6 (qtopia 1.6.1) released by ingenic
-
-[http://vm-kernel.org/blog/2009/02/24/linux-on-onda-vx747/ how to run linux on onda vx747]
-
-=== OEM products ===
- * [http://en.pasen.it/product_detail.php?id=36 Pasen Itouch LE]
-
-= Links =
-<hr>
- * [http://www.rockbox.org/wiki/IngenicJz47xx rockbox wiki page]
- * [http://www.linuxforum.net/forum/showflat.php?Cat=&Board=embedded&Number=707757&page=0&view=collapsed&sb=5&o=0&fpart= forum thread of vx747 hacking(Chinese)]
- * [http://www.liliputing.com/2008/08/little-linux-laptop-new-site-dedicated-to-the-cheapest-of-notebooks.html Little Linux Laptop: New site dedicated to the cheapest of notebooks]
- * [http://groups.google.com/group/jz4740_linux a google group about hacking jz4740(in Chinese)]
- * [http://www.skytone.net.cn/products.php?bigclass=2&smallclass=1&show_type=1 alpha 400 UMPC China design company(in Chinese)]
