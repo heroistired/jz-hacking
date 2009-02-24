@@ -125,6 +125,10 @@ Current Status:
 
 [http://vm-kernel.org/blog/2009/02/24/linux-on-onda-vx747/ how to run linux on onda vx747]
 
+[http://picasaweb.google.com/lh/photo/Xv_vJhWVqL4MW8M2YJc0Yw?feat=directlink screenshot1] 
+[http://picasaweb.google.com/lh/photo/cV4OYKzAb60m3h40Xamv0A?feat=directlink screenshot2] 
+[http://picasaweb.google.com/lh/photo/VMXGs4MUmfyFmOF0ih3lEA?feat=directlink screenshot3]
+
 === OEM products ===
  * [http://en.pasen.it/product_detail.php?id=36 Pasen Itouch LE]
 
