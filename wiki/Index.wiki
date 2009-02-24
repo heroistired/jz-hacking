@@ -129,6 +129,8 @@ Current Status:
 [http://picasaweb.google.com/lh/photo/cV4OYKzAb60m3h40Xamv0A?feat=directlink screenshot2] 
 [http://picasaweb.google.com/lh/photo/VMXGs4MUmfyFmOF0ih3lEA?feat=directlink screenshot3]
 
+<wiki:video url="http://www.youtube.com/watch?v=jbMxSP7_jqY"/>
+
 === OEM products ===
  * [http://en.pasen.it/product_detail.php?id=36 Pasen Itouch LE]
 
