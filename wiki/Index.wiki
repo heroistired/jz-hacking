@@ -123,6 +123,12 @@ Current Status:
  * SD card is working
  * can run rootfs 2.6 (qtopia 1.6.1) released by ingenic
 
+TODO:
+ * Sound and mplayer
+ * nand flash
+ * volume up and down button
+
+
 [http://vm-kernel.org/blog/2009/02/24/linux-on-onda-vx747/ how to run linux on onda vx747]
 
 [http://picasaweb.google.com/lh/photo/Xv_vJhWVqL4MW8M2YJc0Yw?feat=directlink screenshot1] 
