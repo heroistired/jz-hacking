@@ -1,6 +1,5 @@
-#summary This page collects information about Ingenic's MIPS based Soc.
-
-<wiki:toc max_depth="2" />
+#summary This page collects information about Ingenic's MIPS based Soc
+<wiki:toc max_depth="1" />
 
 = jz soc =
 <hr>
