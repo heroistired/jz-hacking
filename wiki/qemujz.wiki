@@ -147,3 +147,7 @@ When you enter linux 2.6 shell. Type 'runqpe'. Do not forget to calibrate touchs
 Following is the screenshot of qtopia on qemu-jz.
 
 http://lh6.ggpht.com/_vf_uV7bji2A/SY1fP_9dwCI/AAAAAAAAAQY/zgeB9nJlfB0/s400/qtopia-2.6.jpg
+
+= git tree =
+
+http://repo.or.cz/w/qemu/qemu-JZ.git
