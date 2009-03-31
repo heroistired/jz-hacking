@@ -19,7 +19,7 @@ JZ4740 can be booted form USB. If so, the internal ROM can communicate with PC u
 
 JZ4740 can boot from nand flash devices. If it is configured booting from nand flash, its internal rom load the first 8K code from nand flash into internal sram and then execute. This 8K code can contain SDRAM init process and other low level init functions and then the program can be executed in SDRAM.
 
-= source code =
+= source code from jz =
 <hr>
 Ingenic has released the source code of u-boot/linux kernel and busybox.
 
