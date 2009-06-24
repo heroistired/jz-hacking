@@ -26,14 +26,12 @@ Tips: In MAC, you can use the flowing compile flag:
 [http://jz-hacking.googlecode.com/files/u-boot-nand-pavo-20090207.bin Prebuild image]. Change its name to u-boot-nand.bin.
 
 {{{
-wget ftp://ftp.ingenic.cn/3sw/01linux/01loader/u-boot/u-boot-1.1.6.tar.bz2
-wget ftp://ftp.ingenic.cn/3sw/01linux/01loader/u-boot/u-boot-1.1.6-jz-20080530.patch.gz
-tar jxvf u-boot-1.1.6.tar.bz2
-cd u-boot-1.1.6
-gzip -cd ../u-boot-1.1.6-jz-20080530.patch.gz | patch -p1
+wget http://jz-hacking.googlecode.com/files/jz_uboot_20090624.tar.bz2
+tar jz_uboot_20090624.tar.bz2
+cd jz_uboot
 }}}
 
-Change line 46 of u-boot-1.1.6/borad/pavo/u-boot-nand.lds.
+Change line 46 of jz_uboot/borad/pavo/u-boot-nand.lds.
 
 {{{
 46 - __got_start = .; 
@@ -49,11 +47,9 @@ make
 [http://jz-hacking.googlecode.com/files/uImage-pavo-20090207 Prebuild image]. Change its name to uImage.
 
 {{{
-wget ftp://ftp.ingenic.cn/3sw/01linux/02kernel/linux-2.6.24/linux-2.6.24.3.tar.bz2
-wget ftp://ftp.ingenic.cn/3sw/01linux/02kernel/linux-2.6.24/linux-2.6.24.3-jz-20080530.patch.gz
-tar jxvf linux-2.6.24.3.tar.bz2
-cd linux-2.6.24.3
-gzip -cd ../linux-2.6.24.3-jz-20080530.patch.gz | patch -p1
+wget http://jz-hacking.googlecode.com/files/jz_linux_2.6.24.3_20090624.tar.bz2
+tar jxvf jz_linux_2.6.24.3_20090624.tar.bz2
+cd jz_linux
 }}}
 
 Download the config file of linux kernel.
