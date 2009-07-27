@@ -73,10 +73,8 @@ make
 Download rootfs and convert it to yaffs2 format.
 
 {{{
-wget ftp://ftp.ingenic.cn/3sw/01linux/03root/rootfs.tgz
-tar zxvf rootfs.tgz
-cd rootfs
-cp -rf root24/opt/Qtopia/ root26/opt/
+wget http://jz-hacking.googlecode.com/files/root26.tar.bz2
+tar jxvf root26.tar.bz2
 mkyaffs2image 1 root26 rootfs.yaffs2
 }}}
 
